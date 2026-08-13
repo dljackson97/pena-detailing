@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Pena Detailing Solutions</title>
+  <meta name="description" content="Book mobile detailing in St. Petersburg, Tampa, Clearwater, or Pinellas Park. Call or text (727) 870-0414, or request a quote online.">
+
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">PENA <span>DETAILING</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="tel:7278700414" class="btn btn--nav nav__cta">📞 (727) 870-0414</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Ready to Get It Detailed?</h1>
+      <p>Fastest way to book: call or text. Prefer to type it out? Send the details below.</p>
+    </section>
+
+    <section class="contact reveal" style="padding-top:60px;">
+      <div class="contact__inner">
+        <div class="contact__grid">
+          <a href="tel:7278700414" class="btn btn--primary btn--large">Call or Text (727) 870-0414</a>
+
+          <form class="quote-form" id="quote-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="PLACEHOLDER-GENERATE-REAL-KEY">
+            <input type="hidden" name="subject" value="New quote request — Pena Detailing">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="tel" name="phone" placeholder="Phone" required>
+            </div>
+            <select name="vehicle" required>
+              <option value="" disabled selected>Vehicle type</option>
+              <option>Car / SUV</option>
+              <option>Truck</option>
+              <option>Moped</option>
+              <option>Motorcycle</option>
+              <option>Golf Cart</option>
+              <option>Boat</option>
+            </select>
+            <input type="text" name="location" placeholder="City / where the vehicle is">
+            <textarea name="message" placeholder="Tell us what it needs" rows="3"></textarea>
+            <button type="submit" class="btn btn--primary">Request a Quote</button>
+            <p class="form-note" id="formStatus">Prefer to call or text? (727) 870-0414 works right now — this form needs a live access key before it can send.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="how reveal">
+      <div class="section__head">
+        <p class="eyebrow">Service Area</p>
+        <h2>Where we show up.</h2>
+      </div>
+      <div class="area-grid">
+        <div class="area-item"><span class="pin">📍</span> St. Petersburg</div>
+        <div class="area-item"><span class="pin">📍</span> Tampa</div>
+        <div class="area-item"><span class="pin">📍</span> Clearwater</div>
+        <div class="area-item"><span class="pin">📍</span> Pinellas Park</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__logo">PENA <span>DETAILING</span></p>
+      <p>Mobile detailing serving St. Petersburg, Tampa, Clearwater &amp; Pinellas Park, FL</p>
+      <p><a href="tel:7278700414">(727) 870-0414</a></p>
+      <p class="footer__fine">© 2026 Pena Detailing Solutions. Site by Clementine Web Co.</p>
+    </div>
+  </footer>
+
+  <a href="tel:7278700414" class="sticky-call">📞 Call or Text (727) 870-0414</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

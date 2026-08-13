@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Pricing | Pena Detailing Solutions</title>
+  <meta name="description" content="Mobile detailing services and starting prices for cars, trucks, mopeds, motorcycles, golf carts, and boats.">
+
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">PENA <span>DETAILING</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="tel:7278700414" class="btn btn--nav nav__cta">📞 (727) 870-0414</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <h1>Every Vehicle, One Guy</h1>
+      <p>Starting prices below — every job gets a firm quote up front based on size and condition, no surprises.</p>
+    </section>
+
+    <!-- VEHICLE PACKAGES -->
+    <section class="services reveal">
+      <div class="section__head">
+        <p class="eyebrow">By Vehicle</p>
+        <h2>What we detail.</h2>
+      </div>
+
+      <div class="package">
+        <div><h3>🚗 Cars &amp; SUVs</h3><p>Full interior + exterior detail — vacuum, shampoo, wipe-down, wash, dry, and a finishing shine.</p></div>
+        <div class="package__price">From $250</div>
+      </div>
+      <div class="package">
+        <div><h3>🛻 Trucks</h3><p>Bed to cab, inside and out — built for daily-driver grime and work-truck wear.</p></div>
+        <div class="package__price">From $250</div>
+      </div>
+      <div class="package">
+        <div><h3>🛵 Mopeds</h3><p>Careful, detail-oriented cleaning — seat, panels, and every hard-to-reach spot.</p></div>
+        <div class="package__price">Text for a quote</div>
+      </div>
+      <div class="package">
+        <div><h3>🏍️ Motorcycles</h3><p>Chrome, tank, seat, and undercarriage — detailed without harsh chemicals on delicate finishes.</p></div>
+        <div class="package__price">Text for a quote</div>
+      </div>
+      <div class="package">
+        <div><h3>⛳ Golf Carts</h3><p>Interior wipe-down, seat and upholstery care, exterior shine.</p></div>
+        <div class="package__price">Text for a quote</div>
+      </div>
+      <div class="package">
+        <div><h3>🚤 Boats</h3><p>Hull, deck, and interior detailing at the marina or your dock — salt and grime, gone.</p></div>
+        <div class="package__price">$30–40/ft</div>
+      </div>
+    </section>
+
+    <!-- SERVICE TYPES -->
+    <section class="how reveal">
+      <div class="section__head">
+        <p class="eyebrow">Service Types</p>
+        <h2>Pick your level.</h2>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <h3>Maintenance Wash</h3>
+          <p>Quick exterior wash to keep things looking fresh between full details.</p>
+        </div>
+        <div class="how-step">
+          <h3>Interior or Exterior Detail</h3>
+          <p>Deep clean just the inside or just the outside — good for a focused refresh.</p>
+        </div>
+        <div class="how-step">
+          <h3>Full Detail</h3>
+          <p>Interior + exterior, the complete treatment. Most popular option.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTANT ESTIMATE -->
+    <section class="services reveal">
+      <div class="section__head">
+        <p class="eyebrow">Try It</p>
+        <h2>Get a ballpark price.</h2>
+      </div>
+      <div class="estimator">
+        <h3>Instant Estimate</h3>
+        <p class="estimator__sub">A quick starting point. Sebastian confirms the exact price before any work starts.</p>
+        <div class="estimator__row">
+          <select id="est-vehicle">
+            <option value="" disabled selected>What needs detailing?</option>
+            <option value="car">Car / SUV</option>
+            <option value="truck">Truck</option>
+            <option value="moped">Moped</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="golfcart">Golf Cart</option>
+            <option value="boat">Boat</option>
+          </select>
+          <div id="est-length-wrap" style="display:none; flex:1; min-width:160px;">
+            <input type="number" id="est-length" placeholder="Boat length (ft)" min="1">
+          </div>
+        </div>
+        <div class="estimator__result" id="est-result">Pick a vehicle type above for a ballpark estimate.</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="contact reveal">
+      <div class="section__head">
+        <p class="eyebrow">Good to Know</p>
+        <h2>Frequently asked.</h2>
+      </div>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Do I need to be there?</h3>
+          <p>Nope — plenty of clients hand off keys and go about their day. Just let Sebastian know the plan when you book.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What do you need on-site?</h3>
+          <p>Most jobs just need a parking spot with access to water and power. If that's tricky where you are, mention it when you book and Sebastian will work out a plan.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How far out do you travel?</h3>
+          <p>St. Petersburg, Tampa, Clearwater, and Pinellas Park are the core service area — text if you're just outside it.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I'm not happy with the result?</h3>
+          <p>Every job is backed by a 200% happiness guarantee — if something's not right, it gets made right.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__logo">PENA <span>DETAILING</span></p>
+      <p>Mobile detailing serving St. Petersburg, Tampa, Clearwater &amp; Pinellas Park, FL</p>
+      <p><a href="tel:7278700414">(727) 870-0414</a></p>
+      <p class="footer__fine">© 2026 Pena Detailing Solutions. Site by Clementine Web Co.</p>
+    </div>
+  </footer>
+
+  <a href="tel:7278700414" class="sticky-call">📞 Call or Text (727) 870-0414</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

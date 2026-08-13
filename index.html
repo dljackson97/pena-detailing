@@ -14,17 +14,19 @@
 </head>
 <body>
 
-  <header class="nav" id="top">
+  <header class="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__logo">PENA <span>DETAILING</span></a>
-      <nav class="nav__links">
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <a href="index.html" class="nav__logo">PENA <span>DETAILING</span></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <a href="tel:7278700414" class="btn btn--nav">📞 (727) 870-0414</a>
+      <a href="tel:7278700414" class="btn btn--nav nav__cta">📞 (727) 870-0414</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
@@ -38,62 +40,59 @@
         <p class="hero__sub">Cars, trucks, mopeds, motorcycles, golf carts, and boats — detailed at your home, office, or marina. No drop-off, no waiting around. Serving St. Petersburg, Tampa, Clearwater, and Pinellas Park.</p>
         <div class="hero__actions">
           <a href="tel:7278700414" class="btn btn--primary">Call or Text (727) 870-0414</a>
-          <a href="#contact" class="btn btn--ghost">Get a Free Quote</a>
+          <a href="contact.html" class="btn btn--ghost">Get a Free Quote</a>
         </div>
-        <p class="hero__note">200% happiness guarantee &nbsp;·&nbsp; 4.9★ on Google &amp; Facebook &nbsp;·&nbsp; 5.0★ on Yelp</p>
+        <div class="badge-row">
+          <span class="badge-pill"><strong>4.9★</strong> Google · 14 reviews</span>
+          <span class="badge-pill"><strong>4.9★</strong> Facebook · 5 reviews</span>
+          <span class="badge-pill"><strong>5.0★</strong> Yelp · 5 reviews</span>
+          <span class="badge-pill"><strong>200%</strong> happiness guarantee</span>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICES & PRICING -->
-    <section id="services" class="services">
+    <!-- VEHICLE STRIP -->
+    <section class="services reveal" style="padding-top:56px; padding-bottom:56px;">
+      <div class="vehicle-strip">
+        <span class="vehicle-chip"><span class="emoji">🚗</span> Cars &amp; SUVs</span>
+        <span class="vehicle-chip"><span class="emoji">🛻</span> Trucks</span>
+        <span class="vehicle-chip"><span class="emoji">🛵</span> Mopeds</span>
+        <span class="vehicle-chip"><span class="emoji">🏍️</span> Motorcycles</span>
+        <span class="vehicle-chip"><span class="emoji">⛳</span> Golf Carts</span>
+        <span class="vehicle-chip"><span class="emoji">🚤</span> Boats</span>
+      </div>
+    </section>
+
+    <!-- INSTANT ESTIMATE -->
+    <section class="how reveal">
       <div class="section__head">
-        <p class="eyebrow">What We Detail</p>
-        <h2>One guy, every kind of ride.</h2>
-        <p class="section__sub">Starting prices below — every job gets a firm quote up front based on size and condition, no surprises.</p>
+        <p class="eyebrow">Try It</p>
+        <h2>Get a ballpark price in 5 seconds.</h2>
+        <p class="section__sub">Pick what you need detailed — no form, no waiting.</p>
       </div>
-
-      <div class="service-grid">
-        <div class="service-card">
-          <span class="service-card__icon">🚗</span>
-          <h3>Cars &amp; SUVs</h3>
-          <p>Full interior + exterior detail, maintenance washes, buff &amp; wax.</p>
-          <p class="service-card__price">From $250</p>
+      <div class="estimator">
+        <h3>Instant Estimate</h3>
+        <p class="estimator__sub">A quick starting point. Sebastian confirms the exact price before any work starts.</p>
+        <div class="estimator__row">
+          <select id="est-vehicle">
+            <option value="" disabled selected>What needs detailing?</option>
+            <option value="car">Car / SUV</option>
+            <option value="truck">Truck</option>
+            <option value="moped">Moped</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="golfcart">Golf Cart</option>
+            <option value="boat">Boat</option>
+          </select>
+          <div id="est-length-wrap" style="display:none; flex:1; min-width:160px;">
+            <input type="number" id="est-length" placeholder="Boat length (ft)" min="1">
+          </div>
         </div>
-        <div class="service-card">
-          <span class="service-card__icon">🛻</span>
-          <h3>Trucks</h3>
-          <p>Bed to cab, inside and out — built for daily-driver grime and work-truck wear.</p>
-          <p class="service-card__price">From $250</p>
-        </div>
-        <div class="service-card">
-          <span class="service-card__icon">🛵</span>
-          <h3>Mopeds &amp; Motorcycles</h3>
-          <p>Careful, detail-oriented cleaning for smaller rides — chrome, seat, and every hard-to-reach panel.</p>
-          <p class="service-card__price">Quote on request</p>
-        </div>
-        <div class="service-card">
-          <span class="service-card__icon">⛳</span>
-          <h3>Golf Carts</h3>
-          <p>Interior wipe-down, seat and upholstery care, exterior shine.</p>
-          <p class="service-card__price">Quote on request</p>
-        </div>
-        <div class="service-card">
-          <span class="service-card__icon">🚤</span>
-          <h3>Boats</h3>
-          <p>Hull, deck, and interior detailing at the marina or your dock — salt and grime, gone.</p>
-          <p class="service-card__price">From $30–40/ft</p>
-        </div>
-        <div class="service-card">
-          <span class="service-card__icon">✨</span>
-          <h3>Buff &amp; Wax</h3>
-          <p>Restore the shine and protect the finish on any vehicle above.</p>
-          <p class="service-card__price">From $35/ft</p>
-        </div>
+        <div class="estimator__result" id="est-result">Pick a vehicle type above for a ballpark estimate.</div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how">
+    <!-- WHY MOBILE (condensed) -->
+    <section class="services reveal">
       <div class="section__head">
         <p class="eyebrow">Why Mobile</p>
         <h2>Skip the drop-off. We bring the shop to you.</h2>
@@ -115,92 +114,33 @@
           <p>Backed by a 200% happiness guarantee — if it's not right, it gets made right.</p>
         </div>
       </div>
+      <p style="text-align:center; margin-top:20px;"><a href="about.html" class="section__link">See the full comparison →</a></p>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="gallery">
-      <div class="section__head">
-        <p class="eyebrow">Before &amp; After</p>
-        <h2>The proof is in the shine.</h2>
-        <p class="section__sub placeholder-flag">Placeholder layout — real before/after photos and video (including a Nissan Rogue and a moped detail) go here once uploaded.</p>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-tile"><span>Before / After — Car</span></div>
-        <div class="gallery-tile"><span>Before / After — Moped</span></div>
-        <div class="gallery-tile"><span>Before / After — Boat</span></div>
-        <div class="gallery-tile"><span>Before / After — Truck</span></div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="reviews" class="reviews">
+    <!-- FEATURED REVIEW -->
+    <section class="reviews reveal">
       <div class="section__head">
         <p class="eyebrow">Reviews</p>
         <h2>What people are saying.</h2>
       </div>
-
-      <div class="rating-row">
-        <div class="rating-pill"><strong>4.9★</strong> Google · 14 reviews</div>
-        <div class="rating-pill"><strong>4.9★</strong> Facebook · 5 reviews</div>
-        <div class="rating-pill"><strong>5.0★</strong> Yelp · 5 reviews</div>
-      </div>
-
-      <div class="review-grid">
+      <div class="review-grid" style="grid-template-columns: 1fr; max-width:640px;">
         <blockquote class="review review--featured">
           <p>"Cleaned my moped and my Nissan Rogue — both came back looking brand new. Reliable, on time, and it's obvious he takes pride in the work. I've had him out twice now and I'll keep calling him."</p>
           <cite>— Devin J., St. Petersburg</cite>
         </blockquote>
-        <blockquote class="review">
-          <p>"Sebastian was great! He did amazing work. My boat looks like new."</p>
-          <cite>— Joseph D., Tampa, FL</cite>
-        </blockquote>
-        <blockquote class="review">
-          <p>"Professional and timely. My vehicle feels brand new."</p>
-          <cite>— Richard N., Clearwater, FL</cite>
-        </blockquote>
       </div>
+      <p style="text-align:center; margin-top:24px;"><a href="reviews.html" class="section__link" style="color: var(--aqua);">Read all reviews →</a></p>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-      <div class="about__inner">
-        <p class="eyebrow">About Sebastian</p>
-        <h2>Detailing that meets you where you are.</h2>
-        <p>Sebastian runs Pena Detailing Solutions out of Pinellas County, driving to clients across St. Petersburg, Tampa, Clearwater, and Pinellas Park. If it has a seat and a set of wheels — or floats — he's probably detailed one: sedans, trucks, mopeds, motorcycles, golf carts, and boats, all handled with the same close attention whether it's a daily driver or a weekend boat.</p>
-        <p>No shop, no drop-off — just a fully equipped mobile setup that shows up on time and leaves things looking (and feeling) brand new.</p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
+    <!-- FINAL CTA -->
+    <section class="contact reveal">
       <div class="contact__inner">
-        <p class="eyebrow">Get In Touch</p>
-        <h2>Ready to get it detailed?</h2>
-        <p class="section__sub">Fastest way to book: call or text. Prefer to type it out? Send the details below.</p>
-
-        <div class="contact__grid">
-          <a href="tel:7278700414" class="btn btn--primary btn--large">Call or Text (727) 870-0414</a>
-
-          <form class="quote-form" id="quote-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="PLACEHOLDER-GENERATE-REAL-KEY">
-            <input type="hidden" name="subject" value="New quote request — Pena Detailing">
-            <div class="form-row">
-              <input type="text" name="name" placeholder="Name" required>
-              <input type="tel" name="phone" placeholder="Phone" required>
-            </div>
-            <select name="vehicle" required>
-              <option value="" disabled selected>Vehicle type</option>
-              <option>Car / SUV</option>
-              <option>Truck</option>
-              <option>Moped</option>
-              <option>Motorcycle</option>
-              <option>Golf Cart</option>
-              <option>Boat</option>
-            </select>
-            <textarea name="message" placeholder="Tell us where it is and what it needs" rows="3"></textarea>
-            <button type="submit" class="btn btn--primary">Request a Quote</button>
-            <p class="form-note" id="formStatus">Prefer to call or text? (727) 870-0414 works right now — this form needs a live access key before it can send.</p>
-          </form>
+        <p class="eyebrow">Ready When You Are</p>
+        <h2>Let's get it detailed.</h2>
+        <p class="section__sub">Serving St. Petersburg, Tampa, Clearwater &amp; Pinellas Park.</p>
+        <div style="margin-top:28px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="tel:7278700414" class="btn btn--primary">Call or Text (727) 870-0414</a>
+          <a href="contact.html" class="btn btn--ghost" style="color:var(--navy); border-color: var(--navy);">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -215,6 +155,8 @@
       <p class="footer__fine">© 2026 Pena Detailing Solutions. Site by Clementine Web Co.</p>
     </div>
   </footer>
+
+  <a href="tel:7278700414" class="sticky-call">📞 Call or Text (727) 870-0414</a>
 
   <script src="script.js"></script>
 </body>

@@ -74,10 +74,47 @@ document.querySelectorAll('.tile-slideshow').forEach((tile) => {
   }
 
   dots.forEach((dot, n) => {
-    dot.addEventListener('click', () => { show(n); restart(); });
+    dot.addEventListener('click', (event) => {
+      event.stopPropagation();
+      show(n);
+      restart();
+    });
   });
 
   if (imgs.length > 1) restart();
+});
+
+// Lightbox for the gallery's featured showcase images
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(src, alt) {
+  if (!lightbox || !lightboxImg) return;
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('open');
+}
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove('open');
+}
+
+document.querySelectorAll('.showcase-media').forEach((media) => {
+  media.addEventListener('click', (event) => {
+    if (event.target.closest('.slide-dots')) return;
+    const activeImg = media.querySelector('img.active') || media.querySelector('img');
+    if (activeImg) openLightbox(activeImg.src, activeImg.alt);
+  });
+});
+if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+if (lightbox) {
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+}
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeLightbox();
 });
 
 // Copy-phone-number button (desktop convenience since there's no email)

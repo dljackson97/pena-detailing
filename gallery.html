@@ -34,23 +34,38 @@
   <main>
 
     <section class="page-hero">
+      <div class="bubbles" aria-hidden="true">
+        <span class="bubble" style="left:8%; width:20px; height:20px; animation-duration:12s; animation-delay:0s; --drift:12px;"></span>
+        <span class="bubble bubble--fleck" style="left:22%; width:8px; height:8px; animation-duration:9s; animation-delay:2s; --drift:-8px;"></span>
+        <span class="bubble bubble--sparkle" style="left:45%; width:34px; height:34px; animation-duration:15s; animation-delay:1s; --drift:16px;"></span>
+        <span class="bubble bubble--ring" style="left:68%; width:18px; height:18px; animation-duration:11s; animation-delay:3s; --drift:-10px;"></span>
+        <span class="bubble bubble--fleck" style="left:85%; width:9px; height:9px; animation-duration:8.5s; animation-delay:4s; --drift:10px;"></span>
+      </div>
       <p class="page-hero__brand">PENA <span>DETAILING</span></p>
       <h1>Before &amp; After</h1>
-      <p class="placeholder-flag">The Nissan Rogue is a real job. The rest are placeholder tiles, ready to swap in as more photos and video come in.</p>
+      <p class="placeholder-flag">The Nissan Rogue below is a real job. More get added as they come in.</p>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,60 Q720,15 1440,60 L1440,100 L0,100 Z" fill="var(--white)"/></svg>
+      </div>
     </section>
 
-    <section class="gallery reveal">
-      <p class="gallery-group-label">Cars &amp; SUVs</p>
-      <div class="gallery-grid">
-        <div class="gallery-tile gallery-tile--media">
+    <!-- FEATURED TRANSFORMATION -->
+    <section class="gallery reveal section--compact">
+      <div class="section__head">
+        <p class="eyebrow">Real Job, Real Results</p>
+        <h2>See the transformation.</h2>
+        <p class="section__sub">A real customer's Nissan Rogue. Click either photo to zoom in.</p>
+      </div>
+      <div class="showcase-grid">
+        <div class="gallery-tile gallery-tile--media showcase-media">
           <img src="images/nissan-before.jpg" alt="Nissan Rogue before mobile detailing">
-          <span>Before, Nissan Rogue</span>
+          <span>Before</span>
         </div>
-        <div class="gallery-tile gallery-tile--media tile-slideshow" id="afterSlideshow">
+        <div class="gallery-tile gallery-tile--media showcase-media tile-slideshow" id="afterSlideshow">
           <img src="images/nissan-after-1.jpg" alt="Clean Nissan Rogue interior after detailing, wide view" class="active">
           <img src="images/nissan-after-2.jpg" alt="Clean Nissan Rogue steering wheel and dash after detailing">
           <img src="images/nissan-after-3.jpg" alt="Clean Nissan Rogue door panel after detailing">
-          <span class="tile-label--top">After, Nissan Rogue</span>
+          <span class="tile-label--top">After</span>
           <div class="slide-dots">
             <button class="active" aria-label="Slide 1"></button>
             <button aria-label="Slide 2"></button>
@@ -58,26 +73,47 @@
           </div>
         </div>
       </div>
-
-      <p class="gallery-group-label">Boats</p>
-      <div class="gallery-grid">
-        <div class="gallery-tile"><span>Before / After, Boat Deck</span></div>
-        <div class="gallery-tile"><span>Before / After, Boat Hull</span></div>
-      </div>
-
-      <p class="gallery-group-label">Trucks</p>
-      <div class="gallery-grid">
-        <div class="gallery-tile"><span>Before / After, Truck</span></div>
-      </div>
-
-      <p class="gallery-group-label">Mopeds &amp; More</p>
-      <div class="gallery-grid">
-        <div class="gallery-tile"><span>Before / After, Moped</span></div>
-        <div class="gallery-tile"><span>Something With a Motor</span></div>
+      <blockquote class="showcase-quote">
+        <p>"Cleaned my moped and my Nissan Rogue, both came back looking brand new. Reliable, on time, and it's obvious he takes pride in the work."</p>
+        <cite>Devin J., St. Petersburg</cite>
+      </blockquote>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,60 Q720,15 1440,60 L1440,100 L0,100 Z" fill="#F4FAFA"/></svg>
       </div>
     </section>
 
-    <section class="how reveal">
+    <!-- MORE VEHICLES -->
+    <section class="how reveal section--compact">
+      <div class="section__head">
+        <p class="eyebrow">Every Vehicle</p>
+        <h2>More jobs, coming soon.</h2>
+        <p class="section__sub">Real photos get added here one job at a time.</p>
+      </div>
+      <div class="coming-soon-grid">
+        <div class="coming-soon-tile">
+          <span class="coming-soon-tile__icon">🚤</span>
+          <h3>Boats</h3>
+          <p>Photos coming soon</p>
+        </div>
+        <div class="coming-soon-tile">
+          <span class="coming-soon-tile__icon">🛻</span>
+          <h3>Trucks</h3>
+          <p>Photos coming soon</p>
+        </div>
+        <div class="coming-soon-tile">
+          <span class="coming-soon-tile__icon">🛵</span>
+          <h3>Mopeds</h3>
+          <p>Photos coming soon</p>
+        </div>
+        <div class="coming-soon-tile">
+          <span class="coming-soon-tile__icon">➕</span>
+          <h3>Everything Else</h3>
+          <p>Motorcycles, golf carts &amp; more</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how reveal section--compact">
       <div class="instagram-callout">
         <p class="eyebrow">More Jobs, More Often</p>
         <p>Want to see more before-and-afters? Sebastian posts the latest jobs on Instagram.</p>
@@ -85,12 +121,15 @@
       </div>
     </section>
 
-    <section class="contact reveal">
+    <section class="contact reveal section--compact">
       <div class="contact__inner">
         <h2>Want yours added to the wall?</h2>
         <div class="cta-actions">
           <a href="tel:7278700414" class="btn btn--primary">Call or Text (727) 870-0414</a>
         </div>
+      </div>
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,60 Q720,15 1440,60 L1440,100 L0,100 Z" fill="var(--navy)"/></svg>
       </div>
     </section>
 
@@ -118,6 +157,11 @@
     <p>"Cleaned my moped and my Nissan Rogue, both came back looking brand new."</p>
     <cite>Devin J., St. Petersburg</cite>
     <a href="reviews.html" class="section__link">See all 24 reviews →</a>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImg" src="" alt="">
   </div>
 
   <script src="script.js"></script>

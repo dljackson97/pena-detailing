@@ -40,17 +40,35 @@ if (revealEls.length && 'IntersectionObserver' in window) {
 
 // One-time review popup, bottom-right, shows once per browser ever (localStorage),
 // regardless of whether it's manually closed or the visitor just navigates away.
+// The mobile sticky call/text bar stays hidden until the popup has been shown
+// and dismissed, so the two never stack up and clutter the bottom of the screen,
+// unless the popup has already been seen on a prior visit, in which case the
+// bar is free to show right away since the popup won't appear again.
 const promoToast = document.getElementById('promoToast');
 const promoClose = document.getElementById('promoToastClose');
+const stickyCall = document.querySelector('.sticky-call');
+
+function revealStickyCall() {
+  if (stickyCall) stickyCall.classList.add('show');
+  document.body.classList.add('sticky-call-visible');
+}
+
 if (promoToast) {
   const seenKey = 'penaPromoSeen';
   if (!localStorage.getItem(seenKey)) {
     localStorage.setItem(seenKey, '1');
     setTimeout(() => promoToast.classList.add('show'), 3200);
+  } else {
+    revealStickyCall();
   }
   if (promoClose) {
-    promoClose.addEventListener('click', () => promoToast.classList.remove('show'));
+    promoClose.addEventListener('click', () => {
+      promoToast.classList.remove('show');
+      revealStickyCall();
+    });
   }
+} else {
+  revealStickyCall();
 }
 
 // Auto-advancing photo slideshow (used for the real Nissan Rogue "after" tile)

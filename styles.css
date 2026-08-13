@@ -124,7 +124,8 @@ a { color: inherit; text-decoration: none; }
   .nav__cta { display: none; }
 }
 
-/* Mobile sticky call bar */
+/* Mobile sticky call bar — hidden until the review popup is shown-and-dismissed
+   (or immediately if it's already been seen before), so the two never stack up */
 .sticky-call {
   display: none;
 }
@@ -135,8 +136,14 @@ a { color: inherit; text-decoration: none; }
     align-items: center; justify-content: center; gap: 8px;
     font-family: var(--font-display); font-weight: 600; letter-spacing: 0.03em;
     box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
+    transform: translateY(100%); visibility: hidden;
+    transition: transform 0.35s ease, visibility 0s linear 0.35s;
   }
-  body { padding-bottom: 58px; }
+  .sticky-call.show {
+    transform: translateY(0); visibility: visible;
+    transition: transform 0.35s ease, visibility 0s linear 0s;
+  }
+  body.sticky-call-visible { padding-bottom: 58px; }
 }
 
 /* Hero */

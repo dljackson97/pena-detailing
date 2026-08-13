@@ -53,6 +53,33 @@ if (promoToast) {
   }
 }
 
+// Auto-advancing photo slideshow (used for the real Nissan Rogue "after" tile)
+document.querySelectorAll('.tile-slideshow').forEach((tile) => {
+  const imgs = tile.querySelectorAll('img');
+  const dots = tile.querySelectorAll('.slide-dots button');
+  let index = 0;
+  let timer;
+
+  function show(i) {
+    imgs.forEach((img, n) => img.classList.toggle('active', n === i));
+    dots.forEach((dot, n) => dot.classList.toggle('active', n === i));
+    index = i;
+  }
+
+  function next() { show((index + 1) % imgs.length); }
+
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(next, 3200);
+  }
+
+  dots.forEach((dot, n) => {
+    dot.addEventListener('click', () => { show(n); restart(); });
+  });
+
+  if (imgs.length > 1) restart();
+});
+
 // Copy-phone-number button (desktop convenience since there's no email)
 const copyBtn = document.getElementById('copyPhoneBtn');
 if (copyBtn) {

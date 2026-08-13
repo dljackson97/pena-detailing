@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div class="preview-banner">This is a free sample website by Clementine Web Co., a preview only. Not live, and not an official Pena Detailing Solutions page.</div>
+  <div class="preview-banner"><strong>Preview</strong>Free sample site by Clementine Web Co. Not live, not an official Pena Detailing Solutions page.</div>
   <header class="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">PENA <span>DETAILING</span></a>
@@ -34,6 +34,7 @@
   <main>
 
     <section class="page-hero">
+      <p class="page-hero__brand">PENA <span>DETAILING</span></p>
       <h1>What People Are Saying</h1>
     </section>
 
@@ -79,9 +80,9 @@
     <section class="contact reveal">
       <div class="contact__inner">
         <h2>Be the next one.</h2>
-        <div style="margin-top:24px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <div class="cta-actions">
           <a href="tel:7278700414" class="btn btn--primary">Call or Text (727) 870-0414</a>
-          <a href="contact.html" class="btn btn--ghost" style="color:var(--navy); border-color: var(--navy);">Request a Quote</a>
+          <a href="contact.html" class="btn btn--ghost btn--ghost-dark">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -106,6 +107,14 @@
   </footer>
 
   <a href="tel:7278700414" class="sticky-call">📞 Call or Text (727) 870-0414</a>
+
+  <div class="promo-toast" id="promoToast">
+    <button class="promo-toast__close" id="promoToastClose" aria-label="Close">×</button>
+    <div class="promo-toast__stars">★★★★★</div>
+    <p>"Cleaned my moped and my Nissan Rogue, both came back looking brand new."</p>
+    <cite>Devin J., St. Petersburg</cite>
+    <a href="reviews.html" class="section__link">See all 24 reviews →</a>
+  </div>
 
   <script src="script.js"></script>
 </body>

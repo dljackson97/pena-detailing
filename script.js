@@ -38,6 +38,21 @@ if (revealEls.length && 'IntersectionObserver' in window) {
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
 
+// One-time review popup, bottom-right, shows once per browser ever (localStorage),
+// regardless of whether it's manually closed or the visitor just navigates away.
+const promoToast = document.getElementById('promoToast');
+const promoClose = document.getElementById('promoToastClose');
+if (promoToast) {
+  const seenKey = 'penaPromoSeen';
+  if (!localStorage.getItem(seenKey)) {
+    localStorage.setItem(seenKey, '1');
+    setTimeout(() => promoToast.classList.add('show'), 3200);
+  }
+  if (promoClose) {
+    promoClose.addEventListener('click', () => promoToast.classList.remove('show'));
+  }
+}
+
 // Copy-phone-number button (desktop convenience since there's no email)
 const copyBtn = document.getElementById('copyPhoneBtn');
 if (copyBtn) {
@@ -52,39 +67,6 @@ if (copyBtn) {
       }, 2000);
     } catch (err) {
       copyBtn.textContent = '(727) 870-0414';
-    }
-  });
-}
-
-// Quote-request form, progressive enhancement over Web3Forms.
-// NOTE: the access_key in contact.html is a placeholder until a real one is
-// generated for this client (see build-brief.md), submissions will fail
-// until it's swapped in. Call/text is the working primary CTA in the meantime.
-const form = document.getElementById('quote-form');
-const status = document.getElementById('formStatus');
-
-if (form && status) {
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    status.textContent = 'Sending…';
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(form),
-      });
-      const result = await response.json();
-
-      if (result.success) {
-        status.textContent = 'Got it, Sebastian will follow up shortly.';
-        form.reset();
-      } else {
-        throw new Error(result.message || 'Something went wrong.');
-      }
-    } catch (err) {
-      status.innerHTML = 'Something went wrong sending that, call or text '
-        + '<a href="tel:7278700414">(727) 870-0414</a> directly.';
     }
   });
 }

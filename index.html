@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <div class="preview-banner">This is a free sample website by Clementine Web Co., a preview only. Not live, and not an official Pena Detailing Solutions page.</div>
+  <div class="preview-banner"><strong>Preview</strong>Free sample site by Clementine Web Co. Not live, not an official Pena Detailing Solutions page.</div>
   <header class="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">PENA <span>DETAILING</span></a>
@@ -36,6 +36,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero__inner">
+        <p class="hero__brand">PENA <span>DETAILING</span></p>
         <p class="eyebrow">Pinellas County Mobile Detailing</p>
         <h1>We come to you.<br>Anywhere it sits, we clean it.</h1>
         <p class="hero__sub">Cars, trucks, and boats are the specialty, detailed at your home, office, or marina. Got a moped, motorcycle, golf cart, or something else with a motor? Text a photo and ask. No drop-off, no waiting around. Serving St. Petersburg, Tampa, Clearwater, and Pinellas Park.</p>
@@ -52,39 +53,8 @@
       </div>
     </section>
 
-    <!-- WHY CHOOSE PENA DETAILING -->
-    <section class="why reveal">
-      <div class="section__head">
-        <p class="eyebrow">Why Pena Detailing</p>
-        <h2>What actually separates one detailer from the next.</h2>
-        <p class="section__sub">Anyone can wash a car. Here's what customers actually come back for.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <span class="why-card__icon">🙋</span>
-          <h3>Sebastian shows up, every time</h3>
-          <p>No rotating crew, no subcontractors. The person who built the reputation is the person doing your job.</p>
-        </div>
-        <div class="why-card">
-          <span class="why-card__icon">⭐</span>
-          <h3>24 five-star reviews, three platforms</h3>
-          <p>4.9+ on Google, Facebook, and Yelp. Real customers across three separate sites, not just marketing copy.</p>
-        </div>
-        <div class="why-card">
-          <span class="why-card__icon">🚗🚤</span>
-          <h3>One call covers everything you own</h3>
-          <p>Cars, trucks, and boats are the specialty, plus mopeds and most anything else with a motor. Most detailers only touch one of those.</p>
-        </div>
-        <div class="why-card">
-          <span class="why-card__icon">🤝</span>
-          <h3>200% happiness guarantee</h3>
-          <p>Backed by an actual guarantee, not just a promise. If it's not right, it gets made right.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- VEHICLE STRIP -->
-    <section class="services reveal" style="padding-top:56px; padding-bottom:56px;">
+    <section class="vehicle-section reveal">
       <div class="vehicle-strip">
         <span class="vehicle-chip"><span class="emoji">🚗</span> Cars &amp; SUVs</span>
         <span class="vehicle-chip"><span class="emoji">🚤</span> Boats</span>
@@ -117,7 +87,7 @@
           <p>Backed by a 200% happiness guarantee, if it's not right, it gets made right.</p>
         </div>
       </div>
-      <p style="text-align:center; margin-top:20px;"><a href="about.html" class="section__link">See the full comparison →</a></p>
+      <p class="section__more"><a href="about.html" class="section__link">See the full comparison →</a></p>
     </section>
 
     <!-- REVIEWS -->
@@ -170,7 +140,7 @@
           <p>"Sebastian is awesome! My Civic was in dire need of attention and he made it look brand new."</p>
         </blockquote>
       </div>
-      <p style="text-align:center; margin-top:24px;"><a href="reviews.html" class="section__link" style="color: var(--aqua);">Read all 24 reviews →</a></p>
+      <p class="section__more"><a href="reviews.html" class="section__link section__link--on-dark">Read all 24 reviews →</a></p>
     </section>
 
     <!-- FINAL CTA -->
@@ -179,9 +149,9 @@
         <p class="eyebrow">Ready When You Are</p>
         <h2>Let's get it detailed.</h2>
         <p class="section__sub">Serving St. Petersburg, Tampa, Clearwater &amp; Pinellas Park.</p>
-        <div style="margin-top:28px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <div class="cta-actions">
           <a href="tel:7278700414" class="btn btn--primary">Call or Text (727) 870-0414</a>
-          <a href="contact.html" class="btn btn--ghost" style="color:var(--navy); border-color: var(--navy);">Request a Quote</a>
+          <a href="contact.html" class="btn btn--ghost btn--ghost-dark">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -206,6 +176,14 @@
   </footer>
 
   <a href="tel:7278700414" class="sticky-call">📞 Call or Text (727) 870-0414</a>
+
+  <div class="promo-toast" id="promoToast">
+    <button class="promo-toast__close" id="promoToastClose" aria-label="Close">×</button>
+    <div class="promo-toast__stars">★★★★★</div>
+    <p>"Cleaned my moped and my Nissan Rogue, both came back looking brand new."</p>
+    <cite>Devin J., St. Petersburg</cite>
+    <a href="reviews.html" class="section__link">See all 24 reviews →</a>
+  </div>
 
   <script src="script.js"></script>
 </body>

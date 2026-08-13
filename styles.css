@@ -212,10 +212,6 @@ a { color: inherit; text-decoration: none; }
   50% { opacity: 1; transform: scale(1.15); }
 }
 
-@media (max-width: 560px) {
-  .bubbles { display: none; }
-}
-
 /* Curved section dividers, replaces hard rectangular color-block edges */
 .wave-divider {
   position: absolute; left: 0; right: 0; bottom: -1px; line-height: 0; z-index: 1; pointer-events: none;
